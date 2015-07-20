@@ -43,7 +43,7 @@ function scrollToId(id,callback)
             function() {
                 $(this).parent().find('.bouton').addClass("move");
                 $(this).parent().find('.hvr-sweep-to-right').addClass("animate");
-                
+   
               });
       $('.action').mouseout(
             function() {
@@ -86,7 +86,7 @@ body{
   border:none;
   color:#FFF;
   font-weight: bold;
-  transform: rotateZ(0deg) ;
+ 
   transition-duration: 0.5s;
   transition-property: transform;
   transition-timing-function: ease-out;
@@ -98,10 +98,15 @@ body{
 :focus {outline:none;} ::-moz-focus-inner {border:0;}
 
 .move {
+/*transform: translate(200px); */
 
-transform: translateX(200px) rotateZ(360deg) ;
+transform : translate(200px) rotate(360deg) ;
+-webkit-transform: translate(200px) rotate(360deg);
+-ms-transform : translate(200px) rotate(360deg);
 transition-duration: 0.5s;
-  transition-property: transform;
+transition-property: transform;
+
+
   }
 
 /* Sweep To Right */
@@ -116,6 +121,7 @@ position: relative;
 height: 100%;
 background-color:#000;
 transition-duration: 0.5s;
+transition-property: transform;
 
 display: -ms-flexbox;
   display: -webkit-flex;
@@ -133,6 +139,7 @@ display: -ms-flexbox;
 
 .animate {
   transform: translateX(200px);
+  -webkit-transform: translateX(200px);
 transition-duration: 0.5s;
   transition-property: transform;
   font-weight: bold;
@@ -288,10 +295,10 @@ a[ id= "slide3" ]:target ~ #content div.panel {
   width: 50%;
   top: 80%;
   max-width: 300px;
-  background: #2E2E2E;
-  -webkit-box-shadow: 0 15px 15px #2E2E2E;
-  -moz-box-shadow: 0 15px 15px #2E2E2E;
-  box-shadow: 0 15px 15px #2E2E2E;
+  background: #000;
+  -webkit-box-shadow: 0 15px 15px #000;
+  -moz-box-shadow: 0 15px 15px #000;
+  box-shadow: 0 15px 15px #000;
   -webkit-transform: rotate(-5deg);
   -moz-transform: rotate(-5deg);
   -o-transform: rotate(-5deg);
@@ -315,6 +322,37 @@ a[ id= "slide3" ]:target ~ #content div.panel {
   position: relative;
   margin-left: 50px;
   margin-top: 50px;
+
+}
+
+.note_content{
+    text-align: center;
+      padding : 5px;
+}
+
+/* Icon Float Away */
+@-webkit-keyframes hvr-icon-float-away {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+  }
+}
+
+@keyframes hvr-icon-float-away {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-1em);
+    transform: translateY(-1em);
+  }
 }
 
 /* Icon Float Away */
@@ -327,15 +365,24 @@ a[ id= "slide3" ]:target ~ #content div.panel {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  padding-right: 2.2em;
 }
 .hvr-icon-float-away:before, .hvr-icon-float-away:after {
-  content: "\f055";
+  content: "\f0aa";
   position: absolute;
-  right: 1em;
+  right: 0.3em;
   padding: 0 1px;
   font-family: FontAwesome;
+  font-size: 2em;
 }
+
+.hvr-icon-float-away:after {
+  opacity: 0;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
 .hvr-icon-float-away:after {
   opacity: 0;
   -webkit-animation-duration: 0.5s;
@@ -354,6 +401,43 @@ a[ id= "slide3" ]:target ~ #content div.panel {
   position: fixed;
 }
 
+.img_note{
+  max-width: 100px;
+  max-height: 300px;
+}
+
+.date{
+  width: 100%;
+  background-color: red;
+  color:white;
+  text-align: right;
+  font-size: 14px;
+  font-style: italic;
+  padding-right: 2px;
+
+}
+
+#slide3{
+  align-items: center;
+  display: flex;
+}
+
+.mini{
+  max-height: 18px;
+}
+
+.formulaire{
+  width: 50%;
+  height: 100%;
+  border-right: solid 1px;
+  float: left;
+}
+
+.artisans{
+  width: 20%;
+  float: left;
+}
+
 </style> 
  
 </head> 
@@ -361,9 +445,6 @@ a[ id= "slide3" ]:target ~ #content div.panel {
 <div id="top"></div>
 <div id="content" class="content">
   <div id="scrolltop" class="scroll-top-wrapper hvr-icon-float-away">
-    <span class="scroll-top-inner">
-      <i class="fa fa-2x fa-arrow-circle-up"></i>
-    </span>
   </div>
   <div id="slide1" class="slide">
 
@@ -396,10 +477,41 @@ a[ id= "slide3" ]:target ~ #content div.panel {
     </div>
   </div>
   <div id="slide2" class="slide">
+    <div class="formulaire">
+      form
+    </div>
+    <div class="artisans">
+      artisans
+    </div>
 
   </div>
 <div id="slide3" class="slide">
   <div class="noteBorder note">
+    <div class="date">20/07/15</div>
+      <div class="note_content">
+        <div class="center">
+          <h2 class="title">Mise en place des plaques</h2>
+          <img class="img_note" src="http://www.ppcaboutique.fr/images/porte/21812.jpg" />
+        </div>
+        <br/>
+        <p>La pose des plaques portes d'entrée + boite aux lettres + configuration de l'interphone à défilement sont prévus en fin de semaine.<br/><br/>
+        <b>ATTENTION</b> Seules les personnes qui ont envoyé <a href="#">ce formulaire</a> par mail auront leur plaques + nom sur l'interphone.
+      </p>
+    </div>
+  </div>
+
+  <div class="noteBorder note">
+    <div class="date">20/07/15</div>
+      <div class="note_content">
+        <div class="center">
+          <h2 class="title">Cartons!</h2>
+          <img class="img_note" src="http://www.voyage-yukon.net/blog/wp-content/uploads/2012/04/cartons.jpg" />
+        </div>
+        <br/>
+        <p>Pour rappel , il est interdit d'entreposer des cartons ou tout autre déchet dans le local à poubelle. Les poubelles sont réservées aux déchets ménagers et les cartons qui peuvent entrer dans les container recyclable. Les autres déchets doivent être jetés à la déchetterie de Sathonay camp (à 7min de fontaines).<br/>
+        <img src="http://icon-park.com/imagefiles/location_map_pin_red6.png" class="mini"/>Itinéraire : <a href="#"> cliquez ici </a>
+      </p>
+    </div>
   </div>
 </div>
 </body> 

@@ -5,6 +5,7 @@
  <meta charset="utf-8" /> 
  
 <title>Rive Lamartine</title> 
+<link rel="icon" type="image/png" href="lamartine-icon.png" />
 <meta name="keywords" content="" /> 
 <meta name="description" content="" /> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -109,6 +110,8 @@ transition-property: transform;
 
   }
 
+
+
 /* Sweep To Right */
 .hvr-sweep-to-right {
   width: 100%;
@@ -122,6 +125,8 @@ height: 100%;
 background-color:#000;
 transition-duration: 0.5s;
 transition-property: transform;
+  text-align: center;
+  color: #FFF;
 
 display: -ms-flexbox;
   display: -webkit-flex;
@@ -131,11 +136,7 @@ display: -ms-flexbox;
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-items: center;
-  text-align: center;
-  color: #FFF;
-
 }
-
 
 .animate {
   transform: translateX(200px);
@@ -154,7 +155,7 @@ transition-duration: 0.5s;
   top:50%;
   opacity: 0.5;
 }
-.titre{
+.titre h2{
   margin: auto;
   width: 500px;
   font-weight: bolder;
@@ -164,6 +165,7 @@ transition-duration: 0.5s;
   z-index: 20;
   text-align: center;
 }
+
 .content{
   width: 100%;
   height: 400%
@@ -188,9 +190,10 @@ background-size: cover;
   height: 100px;
   z-index: 10;
   position: relative;
+  margin-bottom: 20px;
 }
 .action{
-  width: 100%;
+  width: 130%;
   height: 100%;
   position: absolute;
   z-index: 20;
@@ -202,6 +205,7 @@ background-size: cover;
 .big{
   font-size: 4em;
 }
+
 .slide{
   height: 100%;
   position: absolute;
@@ -212,22 +216,29 @@ background-size: cover;
     transition: transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    margin-bottom: 100px;
 }
 
+
+
 #slide2{
-    background-image: url(contact.jpg);
+    background-image: url(contact-icons.png);
     background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     z-index: 10;
     top:100%;
     background-color: white;
+    background-size: 40%;
+    height: 800px;
 }
 #slide3{
     background-image: url(fond_affichage.jpg);
     background-position: right bottom, left top;
     background-repeat: repeat;
     z-index: 10;
-    top:200%;
+    top:1500px;
+    min-height: 100%;
+    height: auto;
 }
 
 /*
@@ -318,6 +329,7 @@ a[ id= "slide3" ]:target ~ #content div.panel {
 .note{
   width: 300px;
   min-height: 100px;
+
   background-color: white;
   position: relative;
   margin-left: 50px;
@@ -418,8 +430,7 @@ a[ id= "slide3" ]:target ~ #content div.panel {
 }
 
 #slide3{
-  align-items: center;
-  display: flex;
+
 }
 
 .mini{
@@ -427,16 +438,399 @@ a[ id= "slide3" ]:target ~ #content div.panel {
 }
 
 .formulaire{
-  width: 50%;
+  width: 60%;
   height: 100%;
   border-right: solid 1px;
   float: left;
 }
 
+
 .artisans{
   width: 20%;
   float: left;
 }
+
+.listNote{
+  position: relative;
+}
+
+
+@media only screen and (min-width: 490px) {
+  .listNote{
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    align-items: center;
+    -webkit-align-items: center;
+  }
+}
+
+
+
+
+/*form*/
+
+
+
+@font-face {
+    font-family: 'IconicStroke';
+    src: url('font/iconic_stroke-webfont.eot');
+    src: url('font/iconic_stroke-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/iconic_stroke-webfont.woff') format('woff'),
+         url('font/iconic_stroke-webfont.ttf') format('truetype'),
+         url('font/iconic_stroke-webfont.svg#IconicStrokeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+h1 {
+font-family: 'Questrial', Verdana, sans-serif;
+text-align:center;
+font-size:30px;
+padding:0;
+margin:0 0 20px 0;
+position:relative;
+color:#8C8C8C;
+}
+
+/** have a nice ampersand **/
+h1:after {
+font-size:25px;
+color:#D6CFCB;
+content: '&'; 
+text-align:center;
+display:block;
+width:100%;
+font-family: 'Alice', Verdana, serif;
+text-shadow: 0px 1px 0px #fff;
+}
+
+/** create the gradient bottom **/
+h1:before {
+position:absolute;
+bottom:15px;
+ content: ' '; 
+ text-align:center;
+ display:block;
+ height:2px;
+ width:100%;
+background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(182,180,180,0.7) 42%, rgba(180,178,178,0) 43%, rgba(168,166,166,0) 50%, rgba(180,178,178,0) 57%, rgba(182,180,180,0.7) 58%, rgba(238,237,237,0.3) 90%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(42%,rgba(182,180,180,0.7)), color-stop(43%,rgba(180,178,178,0)), color-stop(50%,rgba(168,166,166,0)), color-stop(57%,rgba(180,178,178,0)), color-stop(58%,rgba(182,180,180,0.7)), color-stop(90%,rgba(238,237,237,0.3)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(182,180,180,0.7) 42%,rgba(180,178,178,0) 43%,rgba(168,166,166,0) 50%,rgba(180,178,178,0) 57%,rgba(182,180,180,0.7) 58%,rgba(238,237,237,0.3) 90%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(182,180,180,0.7) 42%,rgba(180,178,178,0) 43%,rgba(168,166,166,0) 50%,rgba(180,178,178,0) 57%,rgba(182,180,180,0.7) 58%,rgba(238,237,237,0.3) 90%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(182,180,180,0.7) 42%,rgba(180,178,178,0) 43%,rgba(168,166,166,0) 50%,rgba(180,178,178,0) 57%,rgba(182,180,180,0.7) 58%,rgba(238,237,237,0.3) 90%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(182,180,180,0.7) 42%,rgba(180,178,178,0) 43%,rgba(168,166,166,0) 50%,rgba(180,178,178,0) 57%,rgba(182,180,180,0.7) 58%,rgba(238,237,237,0.3) 90%,rgba(255,255,255,0) 100%); /* W3C */
+
+}
+
+
+
+
+
+/* Here comes to good stuff : content styling */    
+#formcontent{
+position:relative;
+margin:50px auto;    
+width:80%;
+min-height:200px;
+z-index:100;
+padding:30px;
+border:1px solid #383838;
+    
+/* My stipped background */
+background: #D1D1D1; /* Old browsers */
+background: -moz-repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px); /* FF3.6+ */
+    background: -webkit-repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px); /* FF3.6+ */
+    background: -o-repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px); /* FF3.6+ */
+    background: repeating-linear-gradient(-45deg, #EFC1CB , #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px,#F2F2F2 70px, #F2F2F2 80px); /* FF3.6+ */
+/*border-radius*/
+-webkit-border-radius:8px;
+   -moz-border-radius:8px;
+        border-radius:8px;
+/*box-shadow*/
+-webkit-box-shadow:0px 1px 6px #3F3F3F;
+   -moz-box-shadow:0px 1px 6px #3F3F3F;
+        box-shadow:0px 1px 6px #3F3F3F;
+}
+
+/** my "fake" background that will hover the stripes **/
+#formcontent:after{
+background:#F9F9F9;
+margin:10px;
+position: absolute;
+content : " ";
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+z-index: -1; 
+border:1px #E5E5E5 solid;       
+/*border-radius*/
+-webkit-border-radius:8px;
+   -moz-border-radius:8px;
+        border-radius:8px;
+}
+
+
+/*** form styling **/
+
+
+/** we remove the red glow around required fields since we are already using the red star */
+input:required, textarea:required { 
+    -moz-box-shadow:none;  
+    -webkit-box-shadow:none;  
+    -o-box-shadow:none;  
+    box-shadow:none;  
+}
+
+
+
+
+
+
+/** inputs and textarea**/
+input:not([type="submit"]), textarea{
+outline:none;
+display:block;
+width:80%;
+padding:4px 8px;
+border:1px dashed #DBDBDB;
+color:#3F3F3F;
+font-family:'Droid Sans',Tahoma,Arial,Verdana sans-serif;
+font-size:14px;
+/*border-radius*/
+-webkit-border-radius:2px;
+   -moz-border-radius:2px;
+        border-radius:2px;
+/*transition*/
+-webkit-transition:background 0.2s linear,
+           box-shadow 0.6s linear;
+   -moz-transition:background 0.2s linear,
+           box-shadow 0.6s linear;
+     -o-transition:background 0.2s linear,
+           box-shadow 0.6s linear;
+        transition:background 0.2s linear,
+           box-shadow 0.6s linear;
+}
+input:not([type="submit"]):active, 
+textarea:active,
+input:not([type="submit"]):focus, 
+textarea:focus{
+background:#F7F7F7;
+border:dashed 1px #969696;
+/*box-shadow*/
+-webkit-box-shadow:2px 2px 7px #E8E8E8 inset;
+   -moz-box-shadow:2px 2px 7px #E8E8E8 inset;
+        box-shadow:2px 2px 7px #E8E8E8 inset;
+}
+input:not([type="submit"]){
+height: 20px;
+}
+
+/* placeholder */
+::-webkit-input-placeholder  { 
+color:#BABABA; 
+font-style:italic;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder{ 
+color:#BABABA;
+font-style:italic;
+} 
+textarea{
+min-height:150px;
+resize:vertical
+}
+
+
+
+
+/** labels**/
+
+/** adding our icon font !! */
+.iconic:before{
+font-size:25px;
+font-family: "FontAwesome";
+}
+.iconic.quote-alt:before { content: "\f10e"; }
+.iconic.comment:before { content: "\f0e5"; }
+.iconic.user:before { content: "\f007"; }
+.iconic.mail-alt:before { content: "\f0e0"; }
+
+
+label{
+color:#7F7E7E;
+-webkit-transition: color 1s ease;
+   -moz-transition: color 1s ease;
+      transition: color 1s ease;
+}
+label:hover{
+color:#191919;
+}
+label:before{
+color:#C1BFBD;
+-webkit-transition: color 1s ease;
+   -moz-transition: color 1s ease;
+      transition: color 1s ease;
+}
+label:hover:before{
+color:#969696;
+-webkit-transition: color 1s ease;
+   -moz-transition: color 1s ease;
+      transition: color 1s ease;
+}
+
+p{
+margin-bottom:20px;
+}
+.indication{
+color:#878787;
+font-size:12px;
+font-style:italic;
+text-align:right;
+padding-right:10px;
+}
+.required{
+color:#E5224C;
+}
+
+
+
+
+/** Styling the send button **/
+input[type=submit]{
+margin-left: 55%;
+cursor:pointer;
+background:none;
+border:none;
+font-family: 'Alice',serif;
+color:#767676;
+font-size:18px;
+padding:10px 4px;
+border:1px solid #E0E0E0;
+text-shadow: 0px 1px  1px #E8E8E8;
+background: rgb(247,247,247);
+background: -moz-linear-gradient(top,  rgba(247,247,247,1) 1%, rgba(242,242,242,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(247,247,247,1)), color-stop(100%,rgba(242,242,242,1)));
+background: -webkit-linear-gradient(top,  rgba(247,247,247,1) 1%,rgba(242,242,242,1) 100%);
+background: -o-linear-gradient(top,  rgba(247,247,247,1) 1%,rgba(242,242,242,1) 100%);
+background: -ms-linear-gradient(top,  rgba(247,247,247,1) 1%,rgba(242,242,242,1) 100%);
+background: linear-gradient(top,  rgba(247,247,247,1) 1%,rgba(242,242,242,1) 100%);
+/*border-radius*/
+-webkit-border-radius:5px;
+   -moz-border-radius:5px;
+        border-radius:5px;
+/*box-shadow*/
+-webkit-box-shadow:0px 1px 1px #FFF inset,
+             0 0 0px 5px #EAEAEA;
+   -moz-box-shadow:0px 1px 1px #FFF inset,  
+                 0 0 0px 5px #EAEAEA;
+        box-shadow:0px 1px 1px #FFF inset,  
+               0 0 0px 5px #EAEAEA;
+/*transition*/
+-webkit-transition:all 0.2s linear;
+   -moz-transition:all 0.2s linear;
+     -o-transition:all 0.2s linear;
+        transition:all 0.2s linear;
+}
+
+input[type=submit]:hover{
+color:#686868;
+border-color: #CECECE;
+background: rgb(244,244,244);
+background: -moz-linear-gradient(top,  rgba(244,244,244,1) 0%, rgba(242,242,242,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,244,244,1)), color-stop(100%,rgba(242,242,242,1)));
+background: -webkit-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(242,242,242,1) 100%);
+background: -o-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(242,242,242,1) 100%);
+background: -ms-linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(242,242,242,1) 100%);
+background: linear-gradient(top,  rgba(244,244,244,1) 0%,rgba(242,242,242,1) 100%);
+/*box-shadow*/
+-webkit-box-shadow:0px 1px 1px #FFF inset,      
+                   0 0 0px 5px #E0E0E0;
+   -moz-box-shadow:0px 1px 1px #FFF inset,
+              0 0 0px 5px #E0E0E0;
+        box-shadow:0px 1px 1px #FFF inset,
+              0 0 0px 5px #E0E0E0;        
+}
+
+input[type=submit]:active,
+input[type=submit]:focus{
+position:relative;
+top:1px;
+color:#515151;
+background: rgb(234,234,234);
+background: -moz-linear-gradient(top,  rgba(234,234,234,1) 0%, rgba(242,242,242,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(234,234,234,1)), color-stop(100%,rgba(242,242,242,1)));
+background: -webkit-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(242,242,242,1) 100%);
+background: -o-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(242,242,242,1) 100%);
+background: -ms-linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(242,242,242,1) 100%);
+background: linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(242,242,242,1) 100%);
+/*box-shadow*/
+-webkit-box-shadow:0px -1px 1px #FFF inset,
+           0 0 0px 5px #E0E0E0;
+   -moz-box-shadow:0px -1px 1px #FFF inset,
+           0 0 0px 5px #E0E0E0;
+        box-shadow:0px -1px 1px #FFF inset,
+           0 0 0px 5px #E0E0E0;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+      .formulaire{
+        width: 100%;
+        position: relative;
+      }
+      .artisans{
+      width: 100%;
+      position: relative;
+    }
+
+    #slide1{
+      min-height: 420px;
+      background: url(fontaines.jpg) no-repeat;
+      background-size: cover;
+    }
+    .videobg{
+      display: none;
+    }
+    #slide2{
+      min-height: 1200px;
+    }
+    #slide3{
+      top:1300px;
+      padding-bottom: 50px;
+    }
+
+      .hvr-sweep-to-right {
+        transform: translateX(200px);
+        -webkit-transform: translateX(200px);
+      transition-duration: 0.5s;
+        transition-property: transform;
+        font-weight: bold;
+
+      }
+
+      .bouton {
+        /*transform: translate(200px); */
+
+        transform : translate(200px) rotate(360deg) ;
+        -webkit-transform: translate(200px) rotate(360deg);
+        -ms-transform : translate(200px) rotate(360deg);
+        transition-duration: 0.5s;
+        transition-property: transform;
+          }
+
+          .titre h2{
+            width: 300px;
+          }
+
+  }
 
 </style> 
  
@@ -478,7 +872,25 @@ a[ id= "slide3" ]:target ~ #content div.panel {
   </div>
   <div id="slide2" class="slide">
     <div class="formulaire">
-      form
+
+        <div id="formcontent">
+           <h1> Contactez le conseil du syndic </h1>
+            
+            <form action=" " method="post"  autocomplete="on">
+          <p> <label for="username" class="iconic user" > Nom/Prenom <span class="required">*</span></label> <input type="text" name="username" id="username"  required="required" placeholder="Vos noms et prénoms"  /> </p>
+
+          <p> <label for="usermail" class="iconic mail-alt"> E-mail <span class="required">*</span></label> <input type="email" name="usermail" id="usermail" placeholder="Pour que l'on puisse vous recontacter" required="required"  /> </p>
+
+          <p> <label for="subject" class="iconic quote-alt"> Sujet </label> <input type="text" name="subject" id="subject"  placeholder="Le sujet du message" /> </p>
+
+          <p> <label for="message" class="iconic comment"> Message  <span class="required">*</span></label> <textarea placeholder="Laissez nous un message nous vous répondrons le plus vite possible"  required="required" ></textarea> </p>
+          <p class="indication"> Tous les champs avec une <span class="required">*</span> sont obligatoires</p>
+          
+          <input type="submit" value=" ★  Envoyer !" />   
+
+        </form>   
+      </div>
+
     </div>
     <div class="artisans">
       artisans
@@ -486,6 +898,7 @@ a[ id= "slide3" ]:target ~ #content div.panel {
 
   </div>
 <div id="slide3" class="slide">
+<div class="listNote">
   <div class="noteBorder note">
     <div class="date">20/07/15</div>
       <div class="note_content">
@@ -513,6 +926,7 @@ a[ id= "slide3" ]:target ~ #content div.panel {
       </p>
     </div>
   </div>
+</div>
 </div>
 </body> 
 </html> 

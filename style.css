@@ -151,7 +151,7 @@ background-size: cover;
 }
 
 .slide{
-  height: 100%;
+  min-height: 100%;
   position: relative;
   width: 100%;
      -webkit-transform: translateZ( 0 );
@@ -161,6 +161,8 @@ background-size: cover;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   margin-bottom: 20px;
+        padding-top : 10px;
+      padding-bottom : 10px;
 }
 
 
@@ -661,7 +663,6 @@ background: linear-gradient(top,  rgba(247,247,247,1) 1%,rgba(242,242,242,1) 100
         transition:all 0.2s linear;
 }
  #slide1{
-      min-height: 420px;
       background: url(./images/fontaines2.jpg) no-repeat;
       background-size: cover;
     }
@@ -718,13 +719,10 @@ background: linear-gradient(top,  rgba(234,234,234,1) 0%,rgba(242,242,242,1) 100
     }
  
     #slide2{
-      min-height: 1000px;
+      height: 1000px;
     }
-    #slide3{
-      top:100%;
-      margin:0;
-      margin-top:1100px;
-      padding-bottom: 50px;
+    .slide{
+      height: auto;
     }
 }
 

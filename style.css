@@ -3,6 +3,10 @@
   /*height: 400px;*/
 }
 
+.fake{
+  background: none;
+}
+
 .center{
 text-align:center;
 margin:0;
@@ -107,6 +111,8 @@ transition-duration: 0.5s;
   width: 100%;
   height: 100%;
   position: absolute;
+  margin:0;
+  padding: 0;
 }
 .videobg{
   position: fixed;
@@ -154,42 +160,21 @@ background-size: cover;
     transition: transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  /*  margin-bottom: 100px;*/
+  margin-bottom: 20px;
 }
 
 
 
 #slide2{
-    background: transparent url(./images/contact-icons.png) no-repeat fixed right center / cover ;
-   /* background-position: right bottom, left top;
-    background-repeat: no-repeat;*/
-    z-index: 10;
+    background: transparent url(./images/contact-icons.png) no-repeat right center / cover ;
     background-color: white;
     background-size: 40%;
     min-height: 800px;
-    /*height: 100%;*/
 }
 #slide3{
-    background: transparent url(./images/fond_affichage.jpg) repeat fixed right bottom ;
-    z-index: 10;
-    /*min-height: 100%;
-    height: auto;*/
+    background: transparent url(./images/fond_affichage.jpg) repeat  right bottom ;
 }
 
-/*
-a[ id= "slide1" ]:target ~ #content div.slide {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
-}
-
-a[ id= "slide2" ]:target ~ #content div.slide {
-    -webkit-transform: translateY( -500px );
-    transform: translateY( -500px );
-}
-a[ id= "slide3" ]:target ~ #content div.panel {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
-}*/
 
 
 .scroll-top-wrapper {
@@ -345,7 +330,7 @@ a[ id= "slide3" ]:target ~ #content div.panel {
 }
 
 #slide1{
-  position: absolute;
+  position: fixed;
 }
 
 .img_note{
